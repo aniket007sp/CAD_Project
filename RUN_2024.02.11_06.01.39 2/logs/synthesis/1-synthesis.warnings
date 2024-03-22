@@ -1,0 +1,23 @@
+Warning: Encountered `translate_off' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using a portable and standards-compliant construct such as `ifdef is recommended!
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+Warning: Wire mkCla.\sum [15] is used but has no driver.
+Warning: Wire mkCla.\sum [14] is used but has no driver.
+Warning: Wire mkCla.\sum [13] is used but has no driver.
+Warning: Wire mkCla.\sum [12] is used but has no driver.
+Warning: Wire mkCla.\sum [11] is used but has no driver.
+Warning: Wire mkCla.\sum [10] is used but has no driver.
+Warning: Wire mkCla.\sum [9] is used but has no driver.
+Warning: Wire mkCla.\sum [8] is used but has no driver.
+Warning: Wire mkCla.\sum [7] is used but has no driver.
+Warning: Wire mkCla.\sum [6] is used but has no driver.
+Warning: Wire mkCla.\sum [5] is used but has no driver.
+Warning: Wire mkCla.\sum [4] is used but has no driver.
+Warning: Wire mkCla.\sum [3] is used but has no driver.
+Warning: Wire mkCla.\sum [2] is used but has no driver.
+Warning: Wire mkCla.\sum [1] is used but has no driver.
+Warning: Wire mkCla.\sum [0] is used but has no driver.
+Warning: Wire mkCla.\carry is used but has no driver.
+Warning: Wire mkCla.\RDY_val_in is used but has no driver.
+Warning: Wire mkCla.\RDY_sum is used but has no driver.
+Warning: Wire mkCla.\RDY_carry is used but has no driver.
+Warnings: 21 unique messages, 21 total

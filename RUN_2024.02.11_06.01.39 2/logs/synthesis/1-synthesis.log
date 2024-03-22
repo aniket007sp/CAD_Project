@@ -1,0 +1,1128 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.34 (git sha1 4a1b5599258, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /openlane/designs/mkCla/src/mkCla.v
+Parsing SystemVerilog input from `/openlane/designs/mkCla/src/mkCla.v' to AST representation.
+Warning: Encountered `translate_off' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using a portable and standards-compliant construct such as `ifdef is recommended!
+Generating RTLIL representation for module `\mkCla'.
+Successfully finished Verilog frontend.
+
+2. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/mkCla/runs/RUN_2024.02.11_06.01.39/tmp/synthesis/hierarchy.dot'.
+Dumping module mkCla to page 1.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \mkCla
+
+3.2. Analyzing design hierarchy..
+Top module:  \mkCla
+Removed 0 unused modules.
+Renaming module mkCla to mkCla.
+
+4. Executing TRIBUF pass.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \mkCla
+
+5.2. Analyzing design hierarchy..
+Top module:  \mkCla
+Removed 0 unused modules.
+
+6. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/mkCla/src/mkCla.v:833$81 in module mkCla.
+Removed a total of 0 dead cases.
+
+8. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+9. Executing PROC_INIT pass (extract init attributes).
+
+10. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \RST_N in `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+
+11. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~83 debug messages>
+
+12. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+     1/83: $0\sum_out_stage_3_9[0:0]
+     2/83: $0\sum_out_stage_3_8[0:0]
+     3/83: $0\sum_out_stage_3_7[0:0]
+     4/83: $0\sum_out_stage_3_6[0:0]
+     5/83: $0\sum_out_stage_3_5[0:0]
+     6/83: $0\sum_out_stage_3_4[0:0]
+     7/83: $0\sum_out_stage_3_3[0:0]
+     8/83: $0\sum_out_stage_3_2[0:0]
+     9/83: $0\sum_out_stage_3_15[0:0]
+    10/83: $0\sum_out_stage_3_14[0:0]
+    11/83: $0\sum_out_stage_3_13[0:0]
+    12/83: $0\sum_out_stage_3_12[0:0]
+    13/83: $0\sum_out_stage_3_11[0:0]
+    14/83: $0\sum_out_stage_3_10[0:0]
+    15/83: $0\sum_out_stage_3_1[0:0]
+    16/83: $0\sum_out_stage_3_0[0:0]
+    17/83: $0\p_stage_2_9[0:0]
+    18/83: $0\p_stage_2_8[0:0]
+    19/83: $0\p_stage_2_7[0:0]
+    20/83: $0\p_stage_2_6[0:0]
+    21/83: $0\p_stage_2_5[0:0]
+    22/83: $0\p_stage_2_4[0:0]
+    23/83: $0\p_stage_2_3[0:0]
+    24/83: $0\p_stage_2_2[0:0]
+    25/83: $0\p_stage_2_15[0:0]
+    26/83: $0\p_stage_2_14[0:0]
+    27/83: $0\p_stage_2_13[0:0]
+    28/83: $0\p_stage_2_12[0:0]
+    29/83: $0\p_stage_2_11[0:0]
+    30/83: $0\p_stage_2_10[0:0]
+    31/83: $0\p_stage_2_1[0:0]
+    32/83: $0\p_stage_2_0[0:0]
+    33/83: $0\g_stage_2_9[0:0]
+    34/83: $0\g_stage_2_8[0:0]
+    35/83: $0\g_stage_2_7[0:0]
+    36/83: $0\g_stage_2_6[0:0]
+    37/83: $0\g_stage_2_5[0:0]
+    38/83: $0\g_stage_2_4[0:0]
+    39/83: $0\g_stage_2_3[0:0]
+    40/83: $0\g_stage_2_2[0:0]
+    41/83: $0\g_stage_2_15[0:0]
+    42/83: $0\g_stage_2_14[0:0]
+    43/83: $0\g_stage_2_13[0:0]
+    44/83: $0\g_stage_2_12[0:0]
+    45/83: $0\g_stage_2_11[0:0]
+    46/83: $0\g_stage_2_10[0:0]
+    47/83: $0\g_stage_2_1[0:0]
+    48/83: $0\g_stage_2_0[0:0]
+    49/83: $0\c_stage_2[0:0]
+    50/83: $0\c_out_stage_3[0:0]
+    51/83: $0\c_in_stage_1[0:0]
+    52/83: $0\b_in_stage_1_9[0:0]
+    53/83: $0\b_in_stage_1_8[0:0]
+    54/83: $0\b_in_stage_1_7[0:0]
+    55/83: $0\b_in_stage_1_6[0:0]
+    56/83: $0\b_in_stage_1_5[0:0]
+    57/83: $0\b_in_stage_1_4[0:0]
+    58/83: $0\b_in_stage_1_3[0:0]
+    59/83: $0\b_in_stage_1_2[0:0]
+    60/83: $0\b_in_stage_1_15[0:0]
+    61/83: $0\b_in_stage_1_14[0:0]
+    62/83: $0\b_in_stage_1_13[0:0]
+    63/83: $0\b_in_stage_1_12[0:0]
+    64/83: $0\b_in_stage_1_11[0:0]
+    65/83: $0\b_in_stage_1_10[0:0]
+    66/83: $0\b_in_stage_1_1[0:0]
+    67/83: $0\b_in_stage_1_0[0:0]
+    68/83: $0\a_in_stage_1_9[0:0]
+    69/83: $0\a_in_stage_1_8[0:0]
+    70/83: $0\a_in_stage_1_7[0:0]
+    71/83: $0\a_in_stage_1_6[0:0]
+    72/83: $0\a_in_stage_1_5[0:0]
+    73/83: $0\a_in_stage_1_4[0:0]
+    74/83: $0\a_in_stage_1_3[0:0]
+    75/83: $0\a_in_stage_1_2[0:0]
+    76/83: $0\a_in_stage_1_15[0:0]
+    77/83: $0\a_in_stage_1_14[0:0]
+    78/83: $0\a_in_stage_1_13[0:0]
+    79/83: $0\a_in_stage_1_12[0:0]
+    80/83: $0\a_in_stage_1_11[0:0]
+    81/83: $0\a_in_stage_1_10[0:0]
+    82/83: $0\a_in_stage_1_1[0:0]
+    83/83: $0\a_in_stage_1_0[0:0]
+
+13. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+14. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\mkCla.\a_in_stage_1_0' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$249' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_1' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$250' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_10' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$251' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_11' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$252' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_12' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$253' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_13' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$254' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_14' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$255' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_15' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$256' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_2' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$257' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_3' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$258' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_4' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$259' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_5' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$260' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_6' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$261' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_7' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$262' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_8' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$263' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\a_in_stage_1_9' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$264' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_0' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$265' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_1' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$266' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_10' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$267' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_11' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$268' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_12' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$269' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_13' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$270' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_14' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$271' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_15' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$272' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_2' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$273' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_3' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$274' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_4' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$275' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_5' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$276' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_6' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$277' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_7' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$278' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_8' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$279' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\b_in_stage_1_9' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$280' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\c_in_stage_1' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$281' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\c_out_stage_3' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$282' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\c_stage_2' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$283' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_0' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$284' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_1' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$285' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_10' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$286' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_11' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$287' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_12' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$288' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_13' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$289' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_14' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$290' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_15' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$291' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_2' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$292' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_3' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$293' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_4' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$294' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_5' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$295' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_6' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$296' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_7' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$297' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_8' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$298' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\g_stage_2_9' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$299' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_0' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$300' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_1' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$301' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_10' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$302' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_11' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$303' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_12' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$304' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_13' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$305' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_14' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$306' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_15' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$307' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_2' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$308' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_3' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$309' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_4' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$310' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_5' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$311' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_6' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$312' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_7' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$313' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_8' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$314' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\p_stage_2_9' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$315' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_0' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$316' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_1' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$317' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_10' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$318' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_11' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$319' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_12' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$320' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_13' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$321' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_14' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$322' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_15' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$323' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_2' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$324' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_3' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$325' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_4' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$326' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_5' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$327' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_6' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$328' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_7' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$329' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_8' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$330' with positive edge clock and negative level reset.
+Creating register for signal `\mkCla.\sum_out_stage_3_9' using process `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+  created $adff cell `$procdff$331' with positive edge clock and negative level reset.
+
+15. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+16. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 83 empty switches in `\mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+Removing empty process `mkCla.$proc$/openlane/designs/mkCla/src/mkCla.v:833$81'.
+Cleaned up 83 empty switches.
+
+17. Executing CHECK pass (checking for obvious problems).
+Checking module mkCla...
+Found and reported 0 problems.
+
+18. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+<suppressed ~51 debug messages>
+
+19. Executing FLATTEN pass (flatten design).
+
+20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+Removed 1 unused cells and 297 unused wires.
+<suppressed ~2 debug messages>
+
+22. Executing OPT pass (performing simple optimizations).
+
+22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+22.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCla..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+22.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCla.
+Performed a total of 0 changes.
+
+22.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+22.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+22.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+22.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+22.9. Finished OPT passes. (There is nothing left to do.)
+
+23. Executing FSM pass (extract and optimize FSM).
+
+23.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+23.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+23.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+23.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+23.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+23.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+23.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+24. Executing OPT pass (performing simple optimizations).
+
+24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+24.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCla..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~33 debug messages>
+
+24.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCla.
+Performed a total of 0 changes.
+
+24.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+24.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$281 ($adff) from module mkCla (D = \val_in_data_in_3, Q = \c_in_stage_1).
+Adding EN signal on $procdff$280 ($adff) from module mkCla (D = \val_in_data_in_2 [9], Q = \b_in_stage_1_9).
+Adding EN signal on $procdff$279 ($adff) from module mkCla (D = \val_in_data_in_2 [8], Q = \b_in_stage_1_8).
+Adding EN signal on $procdff$278 ($adff) from module mkCla (D = \val_in_data_in_2 [7], Q = \b_in_stage_1_7).
+Adding EN signal on $procdff$277 ($adff) from module mkCla (D = \val_in_data_in_2 [6], Q = \b_in_stage_1_6).
+Adding EN signal on $procdff$276 ($adff) from module mkCla (D = \val_in_data_in_2 [5], Q = \b_in_stage_1_5).
+Adding EN signal on $procdff$275 ($adff) from module mkCla (D = \val_in_data_in_2 [4], Q = \b_in_stage_1_4).
+Adding EN signal on $procdff$274 ($adff) from module mkCla (D = \val_in_data_in_2 [3], Q = \b_in_stage_1_3).
+Adding EN signal on $procdff$273 ($adff) from module mkCla (D = \val_in_data_in_2 [2], Q = \b_in_stage_1_2).
+Adding EN signal on $procdff$272 ($adff) from module mkCla (D = \val_in_data_in_2 [15], Q = \b_in_stage_1_15).
+Adding EN signal on $procdff$271 ($adff) from module mkCla (D = \val_in_data_in_2 [14], Q = \b_in_stage_1_14).
+Adding EN signal on $procdff$270 ($adff) from module mkCla (D = \val_in_data_in_2 [13], Q = \b_in_stage_1_13).
+Adding EN signal on $procdff$269 ($adff) from module mkCla (D = \val_in_data_in_2 [12], Q = \b_in_stage_1_12).
+Adding EN signal on $procdff$268 ($adff) from module mkCla (D = \val_in_data_in_2 [11], Q = \b_in_stage_1_11).
+Adding EN signal on $procdff$267 ($adff) from module mkCla (D = \val_in_data_in_2 [10], Q = \b_in_stage_1_10).
+Adding EN signal on $procdff$266 ($adff) from module mkCla (D = \val_in_data_in_2 [1], Q = \b_in_stage_1_1).
+Adding EN signal on $procdff$265 ($adff) from module mkCla (D = \val_in_data_in_2 [0], Q = \b_in_stage_1_0).
+Adding EN signal on $procdff$264 ($adff) from module mkCla (D = \val_in_data_in_1 [9], Q = \a_in_stage_1_9).
+Adding EN signal on $procdff$263 ($adff) from module mkCla (D = \val_in_data_in_1 [8], Q = \a_in_stage_1_8).
+Adding EN signal on $procdff$262 ($adff) from module mkCla (D = \val_in_data_in_1 [7], Q = \a_in_stage_1_7).
+Adding EN signal on $procdff$261 ($adff) from module mkCla (D = \val_in_data_in_1 [6], Q = \a_in_stage_1_6).
+Adding EN signal on $procdff$260 ($adff) from module mkCla (D = \val_in_data_in_1 [5], Q = \a_in_stage_1_5).
+Adding EN signal on $procdff$259 ($adff) from module mkCla (D = \val_in_data_in_1 [4], Q = \a_in_stage_1_4).
+Adding EN signal on $procdff$258 ($adff) from module mkCla (D = \val_in_data_in_1 [3], Q = \a_in_stage_1_3).
+Adding EN signal on $procdff$257 ($adff) from module mkCla (D = \val_in_data_in_1 [2], Q = \a_in_stage_1_2).
+Adding EN signal on $procdff$256 ($adff) from module mkCla (D = \val_in_data_in_1 [15], Q = \a_in_stage_1_15).
+Adding EN signal on $procdff$255 ($adff) from module mkCla (D = \val_in_data_in_1 [14], Q = \a_in_stage_1_14).
+Adding EN signal on $procdff$254 ($adff) from module mkCla (D = \val_in_data_in_1 [13], Q = \a_in_stage_1_13).
+Adding EN signal on $procdff$253 ($adff) from module mkCla (D = \val_in_data_in_1 [12], Q = \a_in_stage_1_12).
+Adding EN signal on $procdff$252 ($adff) from module mkCla (D = \val_in_data_in_1 [11], Q = \a_in_stage_1_11).
+Adding EN signal on $procdff$251 ($adff) from module mkCla (D = \val_in_data_in_1 [10], Q = \a_in_stage_1_10).
+Adding EN signal on $procdff$250 ($adff) from module mkCla (D = \val_in_data_in_1 [1], Q = \a_in_stage_1_1).
+Adding EN signal on $procdff$249 ($adff) from module mkCla (D = \val_in_data_in_1 [0], Q = \a_in_stage_1_0).
+
+24.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+Removed 33 unused cells and 33 unused wires.
+<suppressed ~34 debug messages>
+
+24.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+24.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+24.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCla..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+24.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCla.
+Performed a total of 0 changes.
+
+24.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+24.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+24.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+24.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+24.16. Finished OPT passes. (There is nothing left to do.)
+
+25. Executing WREDUCE pass (reducing word size of cells).
+
+26. Executing PEEPOPT pass (run peephole optimizers).
+
+27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+28. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module mkCla:
+  created 0 $alu and 0 $macc cells.
+
+29. Executing SHARE pass (SAT-based resource sharing).
+
+30. Executing OPT pass (performing simple optimizations).
+
+30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+30.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCla..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCla.
+Performed a total of 0 changes.
+
+30.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+30.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+30.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+30.9. Finished OPT passes. (There is nothing left to do.)
+
+31. Executing MEMORY pass.
+
+31.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+31.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+31.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+31.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+31.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+31.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+31.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+31.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+31.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+31.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+33. Executing OPT pass (performing simple optimizations).
+
+33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+33.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+33.5. Finished fast OPT passes.
+
+34. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+35. Executing OPT pass (performing simple optimizations).
+
+35.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+35.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+35.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCla..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCla.
+Performed a total of 0 changes.
+
+35.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+35.6. Executing OPT_SHARE pass.
+
+35.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+35.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+35.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+35.10. Finished OPT passes. (There is nothing left to do.)
+
+36. Executing TECHMAP pass (map to technology primitives).
+
+36.1. Executing Verilog-2005 frontend: /build/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/build/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+36.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $adff.
+No more expansions possible.
+<suppressed ~236 debug messages>
+
+37. Executing OPT pass (performing simple optimizations).
+
+37.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+37.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+37.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+37.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+37.5. Finished fast OPT passes.
+
+38. Executing ABC pass (technology mapping using ABC).
+
+38.1. Extracting gate netlist of module `\mkCla' to `<abc-temp-dir>/input.blif'..
+Extracted 80 gates and 145 wires to a netlist network with 65 inputs and 49 outputs.
+
+38.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+38.1.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:       14
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:            ANDNOT cells:       16
+ABC RESULTS:                OR cells:       15
+ABC RESULTS:               AND cells:       16
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:       31
+ABC RESULTS:        internal signals:       31
+ABC RESULTS:           input signals:       65
+ABC RESULTS:          output signals:       49
+Removing temp directory.
+
+39. Executing OPT pass (performing simple optimizations).
+
+39.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+39.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+39.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+39.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+Removed 0 unused cells and 145 unused wires.
+<suppressed ~32 debug messages>
+
+39.5. Finished fast OPT passes.
+
+40. Executing HIERARCHY pass (managing design hierarchy).
+
+40.1. Analyzing design hierarchy..
+Top module:  \mkCla
+
+40.2. Analyzing design hierarchy..
+Top module:  \mkCla
+Removed 0 unused modules.
+
+41. Printing statistics.
+
+=== mkCla ===
+
+   Number of wires:                305
+   Number of wire bits:            350
+   Number of public wires:         260
+   Number of public wire bits:     305
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                177
+     $_ANDNOT_                      16
+     $_AND_                         16
+     $_DFFE_PN0P_                   33
+     $_DFF_PN0_                     50
+     $_NAND_                         1
+     $_NOT_                         14
+     $_OR_                          15
+     $_XNOR_                         1
+     $_XOR_                         31
+
+42. Executing CHECK pass (checking for obvious problems).
+Checking module mkCla...
+Found and reported 0 problems.
+
+43. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/mkCla/runs/RUN_2024.02.11_06.01.39/tmp/synthesis/post_techmap.dot'.
+Dumping module mkCla to page 1.
+
+44. Executing SHARE pass (SAT-based resource sharing).
+
+45. Executing OPT pass (performing simple optimizations).
+
+45.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+45.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+45.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \mkCla..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+45.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \mkCla.
+Performed a total of 0 changes.
+
+45.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\mkCla'.
+Removed a total of 0 cells.
+
+45.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+45.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+
+45.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module mkCla.
+
+45.9. Finished OPT passes. (There is nothing left to do.)
+
+46. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+Removed 0 unused cells and 118 unused wires.
+<suppressed ~118 debug messages>
+
+47. Printing statistics.
+
+=== mkCla ===
+
+   Number of wires:                187
+   Number of wire bits:            232
+   Number of public wires:         142
+   Number of public wire bits:     187
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                177
+     $_ANDNOT_                      16
+     $_AND_                         16
+     $_DFFE_PN0P_                   33
+     $_DFF_PN0_                     50
+     $_NAND_                         1
+     $_NOT_                         14
+     $_OR_                          15
+     $_XNOR_                         1
+     $_XOR_                         31
+
+mapping tbuf
+
+48. Executing TECHMAP pass (map to technology primitives).
+
+48.1. Executing Verilog-2005 frontend: /home/mtech/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/mtech/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+48.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+49. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+50. Executing TECHMAP pass (map to technology primitives).
+
+50.1. Executing Verilog-2005 frontend: /home/mtech/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/mtech/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+50.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+51. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+52. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+52.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\mkCla':
+  mapped 83 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+
+53. Printing statistics.
+
+=== mkCla ===
+
+   Number of wires:                220
+   Number of wire bits:            265
+   Number of public wires:         142
+   Number of public wire bits:     187
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                210
+     $_ANDNOT_                      16
+     $_AND_                         16
+     $_MUX_                         33
+     $_NAND_                         1
+     $_NOT_                         14
+     $_OR_                          15
+     $_XNOR_                         1
+     $_XOR_                         31
+     sky130_fd_sc_hd__dfrtp_2       83
+
+[INFO]: USING STRATEGY AREA 0
+
+54. Executing ABC pass (technology mapping using ABC).
+
+54.1. Extracting gate netlist of module `\mkCla' to `/tmp/yosys-abc-ngwFtK/input.blif'..
+Extracted 127 gates and 227 wires to a netlist network with 100 inputs and 82 outputs.
+
+54.1.1. Executing ABC.
+Running ABC command: "/build/bin/yosys-abc" -s -f /tmp/yosys-abc-ngwFtK/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-ngwFtK/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-ngwFtK/input.blif 
+ABC: + read_lib -w /openlane/designs/mkCla/runs/RUN_2024.02.11_06.01.39/tmp/synthesis/trimmed.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.07 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130A_merged" from "/openlane/designs/mkCla/runs/RUN_2024.02.11_06.01.39/tmp/synthesis/trimmed.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.10 sec
+ABC: Memory =    9.54 MB. Time =     0.10 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /openlane/designs/mkCla/runs/RUN_2024.02.11_06.01.39/tmp/synthesis/synthesis.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2".
+ABC: Setting output load to be 33.442001.
+ABC: + read_constr /openlane/designs/mkCla/runs/RUN_2024.02.11_06.01.39/tmp/synthesis/synthesis.sdc 
+ABC: + fx 
+ABC: + mfs 
+ABC: + strash 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + retime -D -D 10000 -M 5 
+ABC: + scleanup 
+ABC: Error: The network is combinational.
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + fraig_restore 
+ABC: + amap -m -Q 0.1 -F 20 -A 20 -C 5000 
+ABC: + retime -D -D 10000 
+ABC: + &get -n 
+ABC: + &st 
+ABC: + &dch 
+ABC: + &nf 
+ABC: + &put 
+ABC: + buffer -N 10 -S 750.0 
+ABC: + upsize -D 10000 
+ABC: Current delay (3746.18 ps) does not exceed the target delay (10000.00 ps). Upsizing is not performed.
+ABC: + dnsize -D 10000 
+ABC: + stime -p 
+ABC: WireLoad = "none"  Gates =    165 ( 31.5 %)   Cap = 14.3 ff (  7.9 %)   Area =     1287.48 ( 68.5 %)   Delay =  3767.90 ps  ( 10.3 %)               
+ABC: Path  0 --      16 : 0    2 pi                      A =   0.00  Df =  36.9  -20.7 ps  S =  56.8 ps  Cin =  0.0 ff  Cout =  10.9 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     183 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df = 236.4  -53.2 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path  2 --     184 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df = 468.2 -135.5 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path  3 --     185 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df = 699.9 -217.7 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path  4 --     186 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df = 931.7 -299.9 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path  5 --     187 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =1163.4 -382.0 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path  6 --     188 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =1395.1 -464.2 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path  7 --     189 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =1626.8 -546.4 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path  8 --     190 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =1858.6 -628.6 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path  9 --     191 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =2090.3 -710.8 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path 10 --     192 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =2322.0 -793.0 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path 11 --     193 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =2553.7 -875.2 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path 12 --     194 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =2785.5 -957.4 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path 13 --     195 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =3017.2-1039.6 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path 14 --     196 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =3248.9-1121.7 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path 15 --     197 : 3    2 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =3480.6-1203.9 ps  S =  67.5 ps  Cin =  2.4 ff  Cout =  10.9 ff  Cmax = 309.5 ff  G =  445  
+ABC: Path 16 --     198 : 3    1 sky130_fd_sc_hd__a21o_2 A =   8.76  Df =3767.9-1263.8 ps  S = 173.4 ps  Cin =  2.4 ff  Cout =  33.4 ff  Cmax = 309.5 ff  G = 1422  
+ABC: Start-point = pi15 (\p_stage_2_0).  End-point = po0 (\c_out_stage_3$D_IN).
+ABC: + print_stats -m 
+ABC: netlist                       : i/o =  100/   82  lat =    0  nd =   165  edge =    327  area =1287.54  delay =16.00  lev = 16
+ABC: + write_blif /tmp/yosys-abc-ngwFtK/output.blif 
+
+54.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:       16
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:       16
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:       32
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:       16
+ABC RESULTS:   sky130_fd_sc_hd__mux2_2 cells:       33
+ABC RESULTS:   sky130_fd_sc_hd__buf_1 cells:       52
+ABC RESULTS:        internal signals:       45
+ABC RESULTS:           input signals:      100
+ABC RESULTS:          output signals:       82
+Removing temp directory.
+
+55. Executing SETUNDEF pass (replace undef values with defined constants).
+
+56. Executing HILOMAP pass (mapping to constant drivers).
+
+57. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+58. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \mkCla..
+Removed 0 unused cells and 246 unused wires.
+<suppressed ~17 debug messages>
+
+59. Executing INSBUF pass (insert buffer cells for connected wires).
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module mkCla...
+Warning: Wire mkCla.\sum [15] is used but has no driver.
+Warning: Wire mkCla.\sum [14] is used but has no driver.
+Warning: Wire mkCla.\sum [13] is used but has no driver.
+Warning: Wire mkCla.\sum [12] is used but has no driver.
+Warning: Wire mkCla.\sum [11] is used but has no driver.
+Warning: Wire mkCla.\sum [10] is used but has no driver.
+Warning: Wire mkCla.\sum [9] is used but has no driver.
+Warning: Wire mkCla.\sum [8] is used but has no driver.
+Warning: Wire mkCla.\sum [7] is used but has no driver.
+Warning: Wire mkCla.\sum [6] is used but has no driver.
+Warning: Wire mkCla.\sum [5] is used but has no driver.
+Warning: Wire mkCla.\sum [4] is used but has no driver.
+Warning: Wire mkCla.\sum [3] is used but has no driver.
+Warning: Wire mkCla.\sum [2] is used but has no driver.
+Warning: Wire mkCla.\sum [1] is used but has no driver.
+Warning: Wire mkCla.\sum [0] is used but has no driver.
+Warning: Wire mkCla.\carry is used but has no driver.
+Warning: Wire mkCla.\RDY_val_in is used but has no driver.
+Warning: Wire mkCla.\RDY_sum is used but has no driver.
+Warning: Wire mkCla.\RDY_carry is used but has no driver.
+Found and reported 20 problems.
+
+61. Printing statistics.
+
+=== mkCla ===
+
+   Number of wires:                242
+   Number of wire bits:            287
+   Number of public wires:         126
+   Number of public wire bits:     171
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                251
+     sky130_fd_sc_hd__a21o_2        16
+     sky130_fd_sc_hd__and2_2        16
+     sky130_fd_sc_hd__buf_1         52
+     sky130_fd_sc_hd__conb_1         3
+     sky130_fd_sc_hd__dfrtp_2       83
+     sky130_fd_sc_hd__mux2_2        33
+     sky130_fd_sc_hd__nor2_2        32
+     sky130_fd_sc_hd__xor2_2        16
+
+   Chip area for module '\mkCla': 3479.587200
+
+62. Executing Verilog backend.
+Dumping module `\mkCla'.
+
+Warnings: 21 unique messages, 21 total
+End of script. Logfile hash: 405c227bf7, CPU: user 0.46s system 0.03s, MEM: 30.61 MB peak
+Yosys 0.34 (git sha1 4a1b5599258, gcc 8.3.1 -fPIC -Os)
+Time spent: 40% 2x abc (0 sec), 13% 4x stat (0 sec), ...

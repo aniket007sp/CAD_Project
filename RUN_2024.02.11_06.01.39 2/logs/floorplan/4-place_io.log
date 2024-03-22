@@ -1,0 +1,8 @@
+OpenROAD 6f9b2bb8b808b1bb5831d4525d868212ae50517a 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+Top-level design name: mkCla
+[WARNING]: Using min_distance 0.42 for #N pins to avoid overlap
+[WARNING]: Some pins weren't matched by the config file
+Those are: ['EN_val_in', 'RDY_carry', 'RDY_sum', 'RDY_val_in', 'carry', 'sum[0]', 'sum[1]', 'sum[2]', 'sum[3]', 'sum[4]', 'sum[5]', 'sum[6]', 'sum[7]', 'sum[8]', 'sum[9]', 'sum[10]', 'sum[11]', 'sum[12]', 'sum[13]', 'sum[14]', 'sum[15]', 'val_in_data_in_3', 'val_in_data_in_1[0]', 'val_in_data_in_1[1]', 'val_in_data_in_1[2]', 'val_in_data_in_1[3]', 'val_in_data_in_1[4]', 'val_in_data_in_1[5]', 'val_in_data_in_1[6]', 'val_in_data_in_1[7]', 'val_in_data_in_1[8]', 'val_in_data_in_1[9]', 'val_in_data_in_2[0]', 'val_in_data_in_2[1]', 'val_in_data_in_2[2]', 'val_in_data_in_2[3]', 'val_in_data_in_2[4]', 'val_in_data_in_2[5]', 'val_in_data_in_2[6]', 'val_in_data_in_2[7]', 'val_in_data_in_2[8]', 'val_in_data_in_2[9]', 'val_in_data_in_1[10]', 'val_in_data_in_1[11]', 'val_in_data_in_1[12]', 'val_in_data_in_1[13]', 'val_in_data_in_1[14]', 'val_in_data_in_1[15]', 'val_in_data_in_2[10]', 'val_in_data_in_2[11]', 'val_in_data_in_2[12]', 'val_in_data_in_2[13]', 'val_in_data_in_2[14]', 'val_in_data_in_2[15]']
+Treating unmatched pins as errors. Exiting..
